@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habit Tracker</h1>
+            <div>
+                <button id="theme-toggle">Dark Mode</button>
+                <button id="logout" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <!-- Login Section -->
+        <div id="auth-section">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Login</button>
+            <button id="register">Register</button>
+        </div>
+
+        <!-- Main App -->
+        <div id="app-section" style="display: none;">
+            <button id="add-habit">Add Habit</button>
+            <button id="view-progress">View Progress</button>
+            <div id="quote" class="quote"></div>
+            <div id="habit-list"></div>
+        </div>
+
+        <!-- Add/Edit Habit Modal -->
+        <div id="habit-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modal-title">Add Habit</h2>
+                <input type="text" id="habit-name" placeholder="Habit Name">
+                <select id="habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <input type="text" id="habit-description" placeholder="Description">
+                <button id="save-habit">Save</button>
+                <button id="cancel-habit">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Progress Page -->
+        <div id="progress-section" style="display: none;">
+            <div class="progress-header">
+                <h2>Progress</h2>
+                <select id="habit-select"></select>
+            </div>
+            <div class="progress-container">
+                <div id="calendar" class="heatmap"></div>
+                <div id="stats" class="stats"></div>
+            </div>
+            <button id="back-to-home">Back</button>
+        </div>
+    </div>
+
+    <script type="module" src="./ui.js"></script>
+</body>
+</html>
